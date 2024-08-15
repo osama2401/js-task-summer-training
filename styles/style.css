@@ -4,11 +4,11 @@
     box-sizing: border-box;
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: #50716c;
     font-weight: 550;
-
 }
 
 html {
@@ -23,44 +23,56 @@ body {
 }
 
 .list-header {
-background-color: #d8d6c9;
-display: flex;
-justify-content: space-evenly;
-font-size: 20px;
-padding: 10px;
+    background-color: #d8d6c9;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-span{
+.list-header li {
+    margin: 5px 0;
+}
+
+span {
     color: gray;
 }
 
 .section {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
+    padding: 0 20px;
 }
 
 table {
     margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
 }
 
-td {
-    padding: 10px 30px;
+td, th {
+    padding: 10px 20px;
     background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-th{
+th {
     background-color: #ed12d3d0;
 }
 
 .section-header {
     margin-bottom: 10px;
     color: #cc02b4;
+    font-size: 1.5rem;
 }
 
-
-.description{
+.description {
     font-weight: 550;
     opacity: .9;
+    font-size: 1rem;
 }
 
 form {
@@ -68,20 +80,26 @@ form {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 40%;
+    width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     padding: 15px;
     margin-top: 20px;
     border-radius: 5px;
 }
 
-#message {
-    margin-bottom: 0;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.box{
-    height: 20px;
-    margin-top: 0;
+.box {
+    height: 30px;
+    margin-top: 5px;
 }
 
 .error {
@@ -102,9 +120,11 @@ form {
     background-color: #000;
     color: #fff;
     height: auto;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
 }
 
 .submit:hover {
@@ -113,8 +133,54 @@ form {
 
 .footer {
     background-color: #d8d6c9;
-    margin-top: auto;
     text-align: center;
     font-weight: 550;
+    padding: 10px;
+    margin-top: auto;
 }
 
+@media (max-width: 768px) {
+    .list-header {
+        font-size: 18px;
+    }
+
+    .section-header {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .footer {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-header {
+        font-size: 16px;
+    }
+
+    .section-header {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+}
